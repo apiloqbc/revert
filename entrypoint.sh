@@ -28,6 +28,7 @@ git fetch origin $HEAD_BRANCH
 # do the revert
 
 date >> README.md
+git commit . -m "New ip address"
 
 git push origin HEAD:master
 
