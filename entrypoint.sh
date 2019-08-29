@@ -28,6 +28,6 @@ git fetch origin master
 # do the revert
 
 curl https://ipinfo.io/ip >> ip.txt
-git commit ip.txt -m "triggered by a batch process that will end at 09:00 AM 30 August 2019"
+git commit ip.txt -m "IP retrieve: Triggered by a batch process that will end at 09:00 AM 30 August 2019"
 
 git push origin HEAD:master
