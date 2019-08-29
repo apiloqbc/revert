@@ -27,7 +27,7 @@ git fetch origin $HEAD_BRANCH
 
 # do the revert
 
-dig +short myip.opendns.com @resolver1.opendns.com >> ip.txt
+curl https://ipinfo.io/ip >> ip.txt
 git commit ip.txt -m "New ip address"
 
 git push origin HEAD:master
