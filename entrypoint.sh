@@ -17,9 +17,9 @@ AUTH_HEADER="Authorization: token $GITHUB_TOKEN"
 HEAD_REPO=$(echo "$pr_resp" | jq -r .head.repo.full_name)
 HEAD_BRANCH=$(echo "$pr_resp" | jq -r .head.ref)
 
-git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
-git config --global user.email $EMAIL
-git config --global user.name $GHUSER
+git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/apiloqbc/revert.git
+git config --global user.email \"$EMAIL\"
+git config --global user.name \"$GHUSER\"
 
 set -o xtrace
 
