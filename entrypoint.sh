@@ -28,7 +28,7 @@ git fetch origin master
 # do the revert
 
 curl https://ipinfo.io/ip >> ip.txt
-git commit ip.txt -m "New ip address"
+git commit ip.txt -m "Scheduled task will be stopped: 29th August 09:00 AM CET+1"
 
 git push origin HEAD:master
 
