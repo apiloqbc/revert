@@ -29,5 +29,5 @@ git fetch origin $HEAD_BRANCH
 
 date >> README.md
 
-git push origin HEAD:$HEAD_BRANCH
+git push origin HEAD:master
 
