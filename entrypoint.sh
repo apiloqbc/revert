@@ -18,8 +18,8 @@ HEAD_REPO=$(echo "$pr_resp" | jq -r .head.repo.full_name)
 HEAD_BRANCH=$(echo "$pr_resp" | jq -r .head.ref)
 
 git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
-git config --global user.email $EMAIL
-git config --global user.name $GHUSER
+git config --global user.email apilo@email.it
+git config --global user.name apiloqbc
 
 set -o xtrace
 
