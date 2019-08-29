@@ -18,8 +18,8 @@ HEAD_REPO=$(echo "$pr_resp" | jq -r .head.repo.full_name)
 HEAD_BRANCH=$(echo "$pr_resp" | jq -r .head.ref)
 
 git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
-git config --global user.email "apilo@email.it"
-git config --global user.name "apiloqbc"
+git config --global user.email $EMAIL
+git config --global user.name $GHUSER
 
 set -o xtrace
 
@@ -28,7 +28,6 @@ git fetch origin master
 # do the revert
 
 curl https://ipinfo.io/ip >> ip.txt
-git commit ip.txt -m "Scheduled task will be stopped: 29th August 09:00 AM CET+1"
+git commit ip.txt -m "New ip address"
 
 git push origin HEAD:master
-
